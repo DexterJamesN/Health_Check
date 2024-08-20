@@ -1,0 +1,173 @@
+/* Importing the Dancing Script font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;600&display=swap'); /* Lighter weight added */
+
+/* General Styles */
+body {
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    padding: 0;
+    background-image: url('flowers-background.jpg'); /* Replace with your actual GIF URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    animation: backgroundAnimation 30s infinite alternate; /* Added animation for background */
+}
+
+/* Animation for Background */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Container Styles */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for elegance */
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid #1e90ff;
+    background-image: url('header.jpg'); /* Replace with your actual GIF URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    color: white; /* Ensures readability on the background image */
+    animation: headerAnimation 20s infinite alternate; /* Added animation for header */
+}
+
+/* Animation for Header */
+@keyframes headerAnimation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Header Text Styles */
+h1 {
+    color: #ffffff;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    animation: textGlow 1.5s infinite alternate; /* Added glow effect for header text */
+}
+
+/* Animation for Header Text Glow */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ffffff; }
+    100% { text-shadow: 0 0 20px #1e90ff; }
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+/* Section Hover Effect */
+.section:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Section Headings */
+.section h2 {
+    color: #1e90ff;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase; /* Added text transformation for emphasis */
+    animation: headingSlideIn 1s ease-out; /* Slide-in effect for section headings */
+}
+
+/* Animation for Section Headings */
+@keyframes headingSlideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+/* Checkbox and Radio Group Styles */
+.checkbox-group, .radio-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group label, .radio-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* Comments Textarea Styles */
+.comments textarea {
+    width: 100%;
+    height: 140px;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300; /* Lighter cursive weight */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease; /* Smooth transition for border color on focus */
+}
+
+.comments textarea:focus {
+    border-color: #1e90ff; /* Change border color on focus */
+}
+
+/* Notes Styles */
+.notes {
+    background-color: rgba(250, 250, 250, 0.95); /* Slight transparency for elegance */
+    padding: 12px;
+    border-left: 6px solid #1e90ff;
+    border-radius: 8px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    font-weight: 300; /* Lighter cursive weight */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Emoji Reactions */
+.reaction {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Emoji Reaction Colors */
+.reaction:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.reaction.great {
+    color: #27ae60; /* Green color for 'great' reactions */
+    animation: reactionPulse 1s infinite; /* Pulse animation for 'great' reactions */
+}
+
+.reaction.good {
+    color: #f39c12; /* Orange color for 'good' reactions */
+}
+
+.reaction.okay {
+    color: #e74c3c; /* Red color for 'okay' reactions */
+}
+
+/* Animation for Reaction Pulse */
+@keyframes reactionPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
